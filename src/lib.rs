@@ -4,9 +4,9 @@
 
 pub mod composite {
 
-    pub fn function(f: impl Fn(f32) -> f32, g: impl Fn(f32) -> f32) -> impl Fn(f32) -> f32 {
+    pub fn function<T>(f: impl Fn(T) -> T, g: impl Fn(T) -> T) -> impl Fn(T) -> T {
         //! y = f(g(x))
-        move |x: f32| { f(g(x))}
+        move |x: T| { f(g(x))}
     }
 }
 
@@ -67,4 +67,43 @@ pub mod trigonometry {
         //! (1 + sin(Θ)) / 2
         (1.0 + theta.sin()) / 2.0
     }
+}
+
+pub mod calculus {
+     pub mod derivate {
+
+         pub fn vsin(theta: f32) -> f32 {
+             theta.sin()
+         }
+
+         pub fn vcos(theta: f32) -> f32 {
+             -theta.sin()
+         }
+
+         pub fn cvsin(theta: f32) -> f32 {
+             -theta.cos()
+         }
+
+         pub fn cvcos(theta: f32) -> f32 {
+             theta.cos()
+         }
+
+         pub fn hvsin(theta: f32) -> f32 {
+             theta.sin() / 2.0
+         }
+
+         pub fn hcvsin(theta: f32) -> f32 {
+             -theta.cos() / 2.0
+         }
+
+         pub fn hvcos(theta: f32) -> f32 {
+             -theta.sin() / 2.0
+         }
+
+         pub fn hcvcos(theta: f32) -> f32 {
+             theta.cos() / 2.0
+         }
+    }
+
+    pub mod integral {}
 }
