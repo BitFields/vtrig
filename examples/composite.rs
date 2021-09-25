@@ -13,11 +13,11 @@ pub fn composite_example_0() {
 			x * x
 	};
 
-	let u = composite::function(linear_fn, pow_2_fn);
+	let y = composite::function(linear_fn, pow_2_fn);
 
 
 	for x in 0..=10 {
-		println!("x = {}; u(x) = {}", x as f32, u(x as f32));
+		println!("x = {}; y(x) = {}", x as f32, y(x as f32));
 	}
 }
 
