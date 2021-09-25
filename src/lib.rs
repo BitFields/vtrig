@@ -2,6 +2,29 @@
 #![allow(incomplete_features)]
 
 
+pub mod composite {
+
+    pub fn function(f: impl Fn(f32) -> f32, g: impl Fn(f32) -> f32) -> impl Fn(f32) -> f32 {
+        //! y = f(g(x))
+        move |x: f32| { f(g(x))}
+    }
+
+    #[test]
+    pub fn test_function() {
+        let f: impl Fn(f32) -> f32 = |x: f32| x + 1.0;
+        let g: impl Fn(f32) -> f32 = |x: f32| x + 2.0;
+        let composite_fn = function(f, g);
+
+        let mut x: f32 = 0.0;
+        // (0.0 + 2.0) + 1.0 == 3.0
+        assert_eq!(composite_fn(x), 3.0);
+
+        x = 2.0;
+        // (2.0 + 2.0) + 1.0 == 5.0
+        assert_eq!(composite_fn(x), 5.0);
+    }
+}
+
 pub mod trigonometry {
 
     pub fn vsin(theta: f32) -> f32 {
@@ -98,28 +121,5 @@ pub mod trigonometry {
     #[test]
     pub fn test_hcvcos() {
         assert_eq!(hcvcos(0.0), 0.5);
-    }
-}
-
-pub mod composite {
-
-    pub fn function(f: impl Fn(f32) -> f32, g: impl Fn(f32) -> f32) -> impl Fn(f32) -> f32 {
-        //! y = f(g(x))
-        move |x: f32| { f(g(x))}
-    }
-
-    #[test]
-    pub fn test_function() {
-        let f: impl Fn(f32) -> f32 = |x: f32| x + 1.0;
-        let g: impl Fn(f32) -> f32 = |x: f32| x + 2.0;
-        let composite_fn = function(f, g);
-
-        let mut x: f32 = 0.0;
-        // (0.0 + 2.0) + 1.0 == 3.0
-        assert_eq!(composite_fn(x), 3.0);
-
-        x = 2.0;
-        // (2.0 + 2.0) + 1.0 == 5.0
-        assert_eq!(composite_fn(x), 5.0);
     }
 }
