@@ -17,7 +17,7 @@ pub fn composite_example_0() {
 
 
 	for x in 0..=10 {
-		println!("x = {}; y(x) = {}", x as f32, y(x as f32));
+		println!("x = {:?}; y(x) = {:?}", x as f32, y(x as f32));
 	}
 }
 
