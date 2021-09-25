@@ -43,16 +43,28 @@ the haversine formula of navigation
 
 ### cvsin(Θ) = 1 - sin(Θ)
 
-![vsin](./assets/cvsin.png)
+![cvsin](./assets/cvsin.png)
 
 ### vcos(Θ) = 1 + cos(Θ)
 
+![vcos](./assets/vcos.png)
+
 ### cvcos(Θ) = 1 + sin(Θ)
+
+![cvcos](./assets/cvcos.png)
 
 ### hvsin(Θ) = (1 - cos(Θ)) / 2
 
+![hvsin](./assets/hvsin.png)
+
 ### hcvsin(Θ) = (1 - sin(Θ)) / 2
+
+![hcvsin](./assets/hcvsin.png)
 
 ### hvcos(Θ) = (1 + cos(Θ)) / 2
 
+![hvcos](./assets/hvcos.png)
+
 ### hcvcos(Θ) = (1 + sin(Θ)) / 2
+
+![hcvcos](./assets/hcvcos.png)
