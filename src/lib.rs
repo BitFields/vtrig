@@ -128,14 +128,14 @@ pub mod calculus {
             (x - x.sin()) / 2.0
         }
 
-        pub fn hcvsin(x: f32) -> f32 {
-            //! ∫ hvsin(x) dx = (x + cos x) / 2 + C
-            (x + x.cos()) / 2.0
-        }
-
         pub fn hvcos(x: f32) -> f32 {
             //! ∫ hvsin(x) dx = (x + sin x) / 2 + C
             (x + x.sin()) / 2.0
+        }
+
+        pub fn hcvsin(x: f32) -> f32 {
+            //! ∫ hvsin(x) dx = (x + cos x) / 2 + C
+            (x + x.cos()) / 2.0
         }
 
         pub fn hcvcos(x: f32) -> f32 {
