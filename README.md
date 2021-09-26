@@ -68,3 +68,19 @@ the haversine formula of navigation
 ### hcvcos(Θ) = (1 + sin(Θ)) / 2
 
 ![hcvcos](./assets/hcvcos.png)
+
+## Hidden Trigonometry calculus, derivates and integrals
+
+### Examples
+
+```txt
+derivates
+---------
+d(vsin x) / dx = sin x
+d(cvsin x) / dx = -cos x
+
+integrals
+---------
+∫ vsin(x) dx = x - sin x + C
+∫ cvsin(x) dx = x + cos x + C
+```
