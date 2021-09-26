@@ -10,7 +10,7 @@ y(x) = f(g(x))
 let f: impl Fn(f32) -> f32 = move |x: f32| 2.0 * x + 4.0;
 let g: impl Fn(f32) -> f32 = move |x: f32| x * x;
 
-let y: impl Fn(f32) -> f32 = mathplus::composite::function(f, g);
+let y: impl Fn(f32) -> f32 = mathplus::function::composite(f, g);
 
 for x in 0..=10 {
     println!("x = {}; y(x) = {}", x, y(x as f32));
