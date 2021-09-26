@@ -4,24 +4,10 @@
 
 mod test {
     use core::f32;
-	use mathplus::function;
-	use mathplus::trigonometry::*;
-	use mathplus::calculus::{derivate, integral};
+	use secret_trigonometry::trigonometry::*;
+	use secret_trigonometry::calculus::{derivate, integral};
 
-	#[test]
-    pub fn test_composite() {
-        let f: impl Fn(f32) -> f32 = |x: f32| x + 1.0;
-        let g: impl Fn(f32) -> f32 = |x: f32| x + 2.0;
-        let composite_fn = function::composite(f, g);
-
-        let mut x: f32 = 0.0;
-        // (0.0 + 2.0) + 1.0 == 3.0
-        assert_eq!(composite_fn(x), 3.0);
-
-        x = 2.0;
-        // (2.0 + 2.0) + 1.0 == 5.0
-        assert_eq!(composite_fn(x), 5.0);
-    }
+	
 
 	#[test]
     pub fn test_vsin() {

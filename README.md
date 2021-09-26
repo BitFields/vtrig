@@ -1,32 +1,4 @@
-# mathplus - extended math libary
-
-## Composite functions taking one value and returning one value
-
-```txt
-y(x) = f(g(x))
-```
-
-```rust
-let f: impl Fn(f32) -> f32 = move |x: f32| 2.0 * x + 4.0;
-let g: impl Fn(f32) -> f32 = move |x: f32| x * x;
-
-let y: impl Fn(f32) -> f32 = mathplus::function::composite(f, g);
-
-for x in 0..=10 {
-    println!("x = {}; y(x) = {}", x, y(x as f32));
-    // x = 0.0   y(x) = 4.0
-    // x = 1.0   y(x) = 6.0
-    // x = 2.0   y(x) = 12.0
-    // x = 3.0   y(x) = 22.0
-    // x = 4.0   y(x) = 36.0
-    // x = 5.0   y(x) = 54.0
-    // x = 6.0   y(x) = 76.0
-    // x = 7.0   y(x) = 102.0
-    // x = 8.0   y(x) = 132.0
-    // x = 9.0   y(x) = 166.0
-    // x = 10.0  y(x) = 204.0
-}
-```
+# Secret trigonometry
 
 ## Hidden Trigonometry functions
 

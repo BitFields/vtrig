@@ -1,14 +1,6 @@
 #![feature(impl_trait_in_bindings)]
 #![allow(incomplete_features)]
 
-pub mod function {
-
-    pub fn composite<T>(f: impl Fn(T) -> T, g: impl Fn(T) -> T) -> impl Fn(T) -> T {
-        //! y(x) = f(g(x))
-        move |x: T| f(g(x))
-    }
-}
-
 pub mod trigonometry {
     //! Hidden trigonometry functions
 
