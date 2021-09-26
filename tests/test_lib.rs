@@ -4,13 +4,13 @@
 
 mod test {
 	use mathplus::trigonometry::*;
-	use mathplus::composite;
+	use mathplus::function;
 
 	#[test]
     pub fn test_function() {
         let f: impl Fn(f32) -> f32 = |x: f32| x + 1.0;
         let g: impl Fn(f32) -> f32 = |x: f32| x + 2.0;
-        let composite_fn = composite::function(f, g);
+        let composite_fn = function::composite(f, g);
 
         let mut x: f32 = 0.0;
         // (0.0 + 2.0) + 1.0 == 3.0

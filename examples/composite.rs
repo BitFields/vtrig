@@ -1,7 +1,7 @@
 #![feature(impl_trait_in_bindings)]
 #![allow(incomplete_features)]
 
-use mathplus::composite;
+use mathplus::function;
 
 
 pub fn composite_example_0() {
@@ -13,7 +13,7 @@ pub fn composite_example_0() {
 			x * x
 	};
 
-	let y = composite::function(linear_fn, pow_2_fn);
+	let y = function::composite(linear_fn, pow_2_fn);
 
 
 	for x in 0..=10 {
