@@ -4,13 +4,13 @@
 pub mod composite {
 
     pub fn function<T>(f: impl Fn(T) -> T, g: impl Fn(T) -> T) -> impl Fn(T) -> T {
-        //! y = f(g(x))
+        //! y(x) = f(g(x))
         move |x: T| f(g(x))
     }
 }
 
 pub mod trigonometry {
-    /// Hidden trigonometry functions
+    //! Hidden trigonometry functions
 
     pub fn vsin(x: f32) -> f32 {
         //! versed sin
@@ -70,10 +70,10 @@ pub mod trigonometry {
 }
 
 pub mod calculus {
-    /// Hidden trigonometry calculus
+    //! Hidden trigonometry calculus
 
     pub mod derivate {
-        /// Hidden trigonometry derivates
+        //! Hidden trigonometry derivates
 
         pub fn vsin(x: f32) -> f32 {
             //! δvsin x / dx = sin x
@@ -117,7 +117,7 @@ pub mod calculus {
     }
 
     pub mod integral {
-        /// Hidden trigonometry integrals
+        //! Hidden trigonometry integrals
 
         pub fn vsin(x: f32) -> f32 {
             //! ∫ vsin(x) dx = x - sin x + C
