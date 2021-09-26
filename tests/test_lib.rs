@@ -7,7 +7,7 @@ mod test {
 	use mathplus::function;
 
 	#[test]
-    pub fn test_function() {
+    pub fn test_composite() {
         let f: impl Fn(f32) -> f32 = |x: f32| x + 1.0;
         let g: impl Fn(f32) -> f32 = |x: f32| x + 2.0;
         let composite_fn = function::composite(f, g);
