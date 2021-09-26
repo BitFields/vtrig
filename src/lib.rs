@@ -37,14 +37,14 @@ pub mod trigonometry {
         (1.0 - x.cos()) / 2.0
     }
 
-    pub fn hcvsin(x: f32) -> f32 {
-        //! (1 - sin(x)) / 2
-        (1.0 - x.sin()) / 2.0
-    }
-
     pub fn hvcos(x: f32) -> f32 {
         //! (1 + cos(x)) / 2
         (1.0 + x.cos()) / 2.0
+    }
+
+    pub fn hcvsin(x: f32) -> f32 {
+        //! (1 - sin(x)) / 2
+        (1.0 - x.sin()) / 2.0
     }
 
     pub fn hcvcos(x: f32) -> f32 {

@@ -30,33 +30,27 @@ mod test {
     }
 
     #[test]
-    pub fn test_cvsin() {
-        assert_eq!(cvsin(0.0), 1.0);
-        assert_eq!(cvsin(f32::consts::PI), 1.0);
-    }
-
-    #[test]
     pub fn test_vcos() {
         assert_eq!(vcos(0.0), 2.0);
         assert_eq!(vcos(f32::consts::PI), 0.0);
     }
 
     #[test]
+    pub fn test_cvsin() {
+        assert_eq!(cvsin(0.0), 1.0);
+        assert_eq!(cvsin(f32::consts::PI).round(), 1.0);
+    }
+
+    #[test]
     pub fn test_cvcos() {
         assert_eq!(cvcos(0.0), 1.0);
-        assert_eq!(cvcos(f32::consts::PI), 1.0);
+        assert_eq!(cvcos(f32::consts::PI).round(), 1.0);
     }
 
     #[test]
     pub fn test_hvsin() {
         assert_eq!(hvsin(0.0), 0.0);
         assert_eq!(hvsin(f32::consts::PI), 1.0);
-    }
-
-     #[test]
-    pub fn test_hcvsin() {
-        assert_eq!(hcvsin(0.0), 0.5);
-        assert_eq!(hcvsin(f32::consts::PI), 0.5);
     }
 
     #[test]
@@ -66,21 +60,27 @@ mod test {
     }
 
     #[test]
+    pub fn test_hcvsin() {
+        assert_eq!(hcvsin(0.0), 0.5);
+        assert_eq!(hcvsin(f32::consts::PI / 2.0), 0.0);
+    }
+
+    #[test]
     pub fn test_hcvcos() {
         assert_eq!(hcvcos(0.0), 0.5);
-        assert_eq!(hcvcos(f32::consts::PI), 0.5);
+        assert_eq!(hcvcos(f32::consts::PI / 2.0), 1.0);
     }
 
     #[test]
     pub fn test_derivate_vsin() {
         assert_eq!(derivate::vsin(0.0), 0.0);
-        assert_eq!(derivate::vsin(f32::consts::PI), 0.0);
+        assert_eq!(derivate::vsin(f32::consts::PI).round(), 0.0);
     }
 
     #[test]
     pub fn test_derivate_vcos() {
         assert_eq!(derivate::vcos(0.0), 0.0);
-        assert_eq!(derivate::vcos(f32::consts::PI), 0.0);
+        assert_eq!(derivate::vcos(f32::consts::PI).round(), 0.0);
     }
 
     #[test]
@@ -97,20 +97,20 @@ mod test {
 
     #[test]
     pub fn test_derivate_hvsin() {
-        assert_eq!(derivate::hvsin(0.0), 0.0);
-        assert_eq!(derivate::hvsin(f32::consts::PI), 0.0);
+        assert_eq!(derivate::hvsin(0.0).round(), 0.0);
+        assert_eq!(derivate::hvsin(f32::consts::PI).round(), 0.0);
     }
 
     #[test]
     pub fn test_derivate_hvcos() {
-        assert_eq!(derivate::hvcos(0.0), 0.0);
-        assert_eq!(derivate::hvcos(f32::consts::PI), 0.0);
+        assert_eq!(derivate::hvcos(0.0).round(), 0.0);
+        assert_eq!(derivate::hvcos(f32::consts::PI).round(), 0.0);
     }
 
     #[test]
     pub fn test_derivate_hcvsin() {
         assert_eq!(derivate::hcvsin(0.0), -0.5);
-        assert_eq!(derivate::hcvsin(f32::consts::PI), 0.5);
+        assert_eq!(derivate::hcvsin(f32::consts::PI).round(), 1.0);
     }
 
     #[test]
@@ -127,7 +127,7 @@ mod test {
 
     #[test]
     pub fn test_integral_vcos() {
-        assert_eq!(integral::vcos(0.0), 1.0);
+        assert_eq!(integral::vcos(0.0), 0.0);
         assert_eq!(integral::vcos(f32::consts::PI), f32::consts::PI);
     }
 
@@ -146,7 +146,7 @@ mod test {
     #[test]
     pub fn test_integral_hvsin() {
         assert_eq!(integral::hvsin(0.0), 0.0);
-        assert_eq!(integral::hvsin(f32::consts::PI / 2.0), f32::consts::PI / 2.0);
+        assert_eq!(integral::hvsin(f32::consts::PI), f32::consts::PI / 2.0);
     }
 
     #[test]
