@@ -2,7 +2,7 @@
 #![allow(incomplete_features)]
 
 pub mod trigonometry {
-    //! Hidden trigonometry functions
+    //! Versed trigonometry functions
 
     pub fn vsin(x: f32) -> f32 {
         //! 1 - cos(x)
@@ -46,7 +46,7 @@ pub mod trigonometry {
 }
 
 pub mod calculus {
-    //! Hidden trigonometry calculus
+    //! Versed trigonometry calculus
 
     pub mod derivate {
         //! Hidden trigonometry derivates
@@ -93,7 +93,7 @@ pub mod calculus {
     }
 
     pub mod integral {
-        //! Hidden trigonometry integrals
+        //! Versed trigonometry integrals
 
         pub fn vsin(x: f32) -> f32 {
             //! ∫ vsin(x) dx = x - sin x + C
