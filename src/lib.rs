@@ -9,14 +9,14 @@ pub mod trigonometry {
         1.0 - x.cos()
     }
 
-    pub fn cvsin(x: f32) -> f32 {
-        //! 1 - sin(x)
-        1.0 - x.sin()
-    }
-
     pub fn vcos(x: f32) -> f32 {
         //! 1 + cos(x)
         1.0 + x.cos()
+    }
+
+    pub fn cvsin(x: f32) -> f32 {
+        //! 1 - sin(x)
+        1.0 - x.sin()
     }
 
     pub fn cvcos(x: f32) -> f32 {
