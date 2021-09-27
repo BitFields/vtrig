@@ -4,8 +4,8 @@
 
 mod test {
     use core::f32;
-	use secret_trigonometry::trigonometry::*;
-	use secret_trigonometry::calculus::{derivate, integral};
+	use vtrig::trigonometry::*;
+	use vtrig::calculus::{derivate, integral};
 
 	
 
