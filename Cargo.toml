@@ -6,7 +6,7 @@ edition = "2018"
 description = "Hidden trigonometry functions with their derivates and integrals"
 keywords = ["math", "trigonometry", "hidden"]
 license = "Apache-2.0"
-repository = "https://github.com/JosipHaboic/vtrig"
+repository = "https://github.com/BitFields/vtrig"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
