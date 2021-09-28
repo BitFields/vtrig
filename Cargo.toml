@@ -3,7 +3,8 @@ name = "vtrig"
 version = "1.0.0"
 authors = ["jhaboic <josiphaboic@gmail.com>"]
 edition = "2018"
-
+description = "Hidden trigonometry functions with their derivates and integrals"
+keywords = ["math", "trigonometry", "hidden"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
